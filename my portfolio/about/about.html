@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=Sora:wght@700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="about.css">
+  <title>About | Adebayo Adesugba</title>
+ 
+   
+</head>
+<body>
+
+  <header>
+    <nav class="desktop-nav">
+      <a href="../index.html" class="nav-item">Homepage</a>
+      <a href="about.html" class="nav-item active">About Me</a>
+      <a href="../resume/resume.html" class="nav-item">Resume</a>
+      <a href="../contact/contact.html" class="nav-item">Contact</a>
+      <a href="https://github.com/adebayoadesugba" class="nav-item" target="_blank">GitHub</a>
+    </nav>
+
+    <div class="header-controls">
+      <div class="volume-container">
+        <button id="mute-btn" class="mute-btn">🔊</button>
+        <input type="range" id="volume-slider" class="volume-slider" min="0" max="1" step="0.1" value="0.2">
+      </div>
+      <div class="system-clock" id="system-clock">00:00 AM</div>
+    </div>
+
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg> Homepage
+    </a>
+    <a href="about.html" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg> About Me
+    </a>
+    <a href="../resume/resume.html" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg> Resume
+    </a>
+    <a href="../contact/contact.html" class="mobile-nav-item">
+      <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> Contact
+    </a>
+    <a href="https://github.com/adebayoadesugba" class="mobile-nav-item" target="_blank">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg> GitHub
+    </a>
+  </div>
+
+  <main>
+    <div class="about-container">
+      <div class="profile-circle">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=500" alt="Adebayo Adesugba">
+      </div>
+
+      <div class="about-content">
+        <h1 class="about-title">ADEBAYO ADESUGBA</h1>
+        <h2 class="about-subtitle">Full-Stack Web Developer & Automation Engineer</h2>
+        
+        <p class="about-text">
+          I specialize in building custom, high-performance web applications using the MERN stack (MongoDB, Express, React, Node.js). Rather than relying on third-party storefronts, I architect bespoke e-commerce and real estate platforms from the ground up to ensure absolute control over user experience and performance.
+        </p>
+        <p class="about-text">
+          Beyond web development, I am heavily invested in Python automation and AI engineering. Utilizing tools like Selenium, I build data-driven scrapers, automated social reporting bots, and advanced predictive modeling tools.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <div class="stat-label">Core Stack</div>
+            <div class="stat-value">MERN, Python</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">Specialties</div>
+            <div class="stat-value">E-commerce, Automation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skills-section">
+      <h2 class="skills-header scroll-anim">System Capabilities</h2>
+      
+      <div class="skills-grid">
+        
+        <div class="skill-card scroll-anim" style="transition-delay: 0.1s;">
+          <h3 class="skill-category">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--blue-accent);"><polygon points="16 3 21 8 8 21 3 21 3 16 16 3"></polygon></svg>
+            Frontend
+          </h3>
+          <ul class="skill-list">
+            <li>React.js</li>
+            <li>Tailwind CSS</li>
+            <li>JavaScript (ES6+)</li>
+            <li>HTML5 / CSS3</li>
+            <li>Redux State Management</li>
+          </ul>
+        </div>
+
+        <div class="skill-card scroll-anim" style="transition-delay: 0.3s;">
+          <h3 class="skill-category">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--blue-accent);"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            Backend
+          </h3>
+          <ul class="skill-list">
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>Python</li>
+            <li>Selenium Automation</li>
+            <li>RESTful APIs</li>
+          </ul>
+        </div>
+
+        <div class="skill-card scroll-anim" style="transition-delay: 0.5s;">
+          <h3 class="skill-category">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--blue-accent);"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            Database & Auth
+          </h3>
+          <ul class="skill-list">
+            <li>MongoDB</li>
+            <li>Mongoose ORM</li>
+            <li>PostgreSQL</li>
+            <li>JWT Authentication</li>
+            <li>OAuth Integration</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <div class="action-prompt" id="action-prompt">
+    <div class="btn-circle">O</div>
+    <span>BACK</span>
+  </div>
+
+  <footer class="copyright-footer" id="copyright-footer"></footer>
+  <script src="about.js"></script>
+    
+
+</body>
+</html>
