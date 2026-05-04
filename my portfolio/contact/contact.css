@@ -23,7 +23,7 @@
     /* --- NAVIGATION (Shared) --- */
     header {
       display: flex; justify-content: space-between; align-items: center;
-      padding: 20px 10px; background: rgba(2, 8, 19, 0.8); backdrop-filter: blur(8px);
+      padding: 20px 10px; background: rgba(2, 8, 19, 0.8); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.05); position: sticky; top: 0; z-index: 100;
     }
     .desktop-nav { display: flex; gap: 30px; margin: 0 auto; }
@@ -32,7 +32,7 @@
     .nav-item.active { border-bottom: 2px solid var(--blue-accent); padding-bottom: 4px; }
     
     .header-controls { display: flex; align-items: center; gap: 15px; position: absolute; right: 40px; }
-    .system-clock { color: var(--text-main); font-size: 0.9rem; font-weight: 500; letter-spacing: 1px; margin-left: 5px; }
+    .system-clock { font-variant-numeric: tabular-nums; color: var(--text-main); font-size: 0.9rem; font-weight: 500; letter-spacing: 1px; margin-left: 5px; }
     
     /* Redesigned Volume Container */
     .volume-container {
@@ -57,10 +57,10 @@
       position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
       background: rgba(2, 8, 20, 0.98); display: flex; flex-direction: column;
       align-items: stretch; justify-content: flex-start; padding-top: 90px;
-      z-index: 90; clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-      transition: clip-path 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+      z-index: 90; transform: translateY(-100%);
+      transition: transform 0.35s cubic-bezier(0.86, 0, 0.07, 1); will-change: transform; contain: layout style paint;
     }
-    .mobile-menu.open { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+    .mobile-menu.open { transform: translateY(0); }
     .mobile-nav-item {
       display: flex; align-items: center; gap: 15px; padding: 18px 30px;
       font-size: 1.1rem; color: var(--text-main); text-decoration: none;
@@ -86,7 +86,7 @@
       .desktop-nav { display: none; } .hamburger { display: flex; }
       .header-controls { right: 65px; } .volume-slider { width: 50px; }
     }
-    @media (max-width: 400px) { .system-clock { display: none; } }
+    @media (max-width: 400px) { .system-clock { font-variant-numeric: tabular-nums; display: none; } }
 
     /* --- CONTACT PAGE SPECIFIC STYLES --- */
     main {
@@ -100,7 +100,7 @@
     .contact-form {
       background: rgba(2, 8, 19, 0.5); border: 1px solid rgba(255, 255, 255, 0.1);
       padding: 20px; border-radius: 8px; width: 100%; max-width: 500px;
-      display: flex; flex-direction: column; gap: 20px; backdrop-filter: blur(4px);
+      display: flex; flex-direction: column; gap: 20px; backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
       animation: fadeUp 0.6s ease forwards;
     }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -126,8 +126,13 @@
     .submit-btn:hover { background: #93c5fd; box-shadow: 0 0 20px rgba(147, 197, 253, 0.5); }
 
     /* --- FIXED PROMPT & FOOTER --- */
-    .action-prompt { position: fixed; bottom: 30px; right: 50px; z-index: 100; display: flex; align-items: center; gap: 10px; color: var(--text-muted); cursor: pointer; padding: 10px 20px; border-radius: 8px; background: rgba(255,255,255,0.05); backdrop-filter: blur(4px); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.2s; font-weight: bold; letter-spacing: 1px; }
+    .action-prompt { position: fixed; bottom: 30px; right: 50px; z-index: 100; display: flex; align-items: center; gap: 10px; color: var(--text-muted); cursor: pointer; padding: 10px 20px; border-radius: 8px; background: rgba(255,255,255,0.05); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); border: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.2s; font-weight: bold; letter-spacing: 1px; }
     .action-prompt:hover { background: rgba(255,255,255,0.15); color: var(--text-main); }
     .btn-circle { width: 24px; height: 24px; border: 2px solid currentColor; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; }
     .copyright-footer { text-align: center; padding: 15px; font-size: 0.75rem; color: var(--text-muted); background: rgba(0, 0, 0, 0.3); letter-spacing: 1px; width: 100%; position: relative; bottom: 0; }
   
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  #particle-canvas { display: none; }
+}
